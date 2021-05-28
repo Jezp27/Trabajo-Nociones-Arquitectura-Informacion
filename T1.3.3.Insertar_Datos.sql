@@ -16,7 +16,8 @@ salary_offered,
 contact_email,
 contact_phone_number,
 job_board,
-inferred_city)
+inferred_city,
+company_name)
 SELECT uniq_id,
 crawl_timestamp,
 url,
@@ -29,7 +30,9 @@ salary_offered,
 contact_email,
 contact_phone_number,
 job_board,
-inferred_city FROM tabla_master;
+inferred_city,
+company_name FROM tabla_master;
+
 --------------------------------------------------
 INSERT INTO CITY(city,inferred_state)
 SELECT DISTINCT city,inferred_state FROM tabla_master;

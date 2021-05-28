@@ -39,7 +39,8 @@ CREATE TABLE "JOB_POSTING" (
 	"contact_email"	TEXT,
 	"contact_phone_number"	TEXT,
 	"job_board"	TEXT,	
-	"inferred_city"	TEXT
+	"inferred_city"	TEXT,
+	"company_name" TEXT
 )
 --------------------------------------------------
 CREATE TABLE "CITY" (
