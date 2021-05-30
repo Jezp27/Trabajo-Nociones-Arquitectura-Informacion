@@ -23,7 +23,8 @@ GROUP BY (job_title)
 ORDER BY (AMOUNT) DESC 
 LIMIT 10;
 -------------------------------------------------
-SELECT CP.company_name,ifnull(CT.city,'Remote') AS COMPANY_CITY,COUNT(uniq_id) AS AMOUNT 
+SELECT CP.company_name,ifnull(CT.city,'Remote') AS COMPANY_CITY,
+COUNT(DISTINCT(uniq_id)) AS AMOUNT 
 FROM JOB_POSTING JP 
 LEFT JOIN COMPANY CP ON JP.company_name=CP.company_name 
 LEFT JOIN CITY CT ON CP.city=CT.city
